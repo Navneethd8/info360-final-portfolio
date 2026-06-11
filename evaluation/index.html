@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluation — StudyMatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="../index.html" class="site-logo">StudyMatch</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../index.html#problem">Problem</a>
+        <a href="../index.html#rationale">Rationale</a>
+        <a href="../solution/">Solution</a>
+        <a href="../evaluation/" class="is-active">Evaluation</a>
+        <a href="../index.html#reflection">Reflection</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--orange">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> → Evaluation
+        </nav>
+
+        <header class="section-header">
+          <span class="section-header__number">02 — Evaluation</span>
+          <h2>How We Evaluated the Design</h2>
+          <span class="placeholder-badge">Content in progress</span>
+          <p class="section-header__intro">Methods, participants, tasks, findings, and what we learned.</p>
+        </header>
+
+        <h3>Methods</h3>
+        <div class="method-chips">
+          <span class="method-chip">Semi-structured interviews</span>
+          <span class="method-chip">Survey</span>
+          <span class="method-chip">Paper prototype testing</span>
+          <span class="method-chip">Heuristic evaluation</span>
+          <span class="method-chip">User feedback</span>
+        </div>
+        <p><em>[Add or remove methods based on what you actually ran for prototype evaluation]</em></p>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container">
+        <h2>Participants &amp; Tasks</h2>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Participants</th>
+              <th>Tasks / Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Interviews</td>
+              <td>3 freshman students</td>
+              <td>Open-ended questions on study habits, group formation, compatibility</td>
+            </tr>
+            <tr>
+              <td>Survey</td>
+              <td>10 students (fraternity GroupMe)</td>
+              <td>Rank factors for group compatibility; rate struggles finding groups</td>
+            </tr>
+            <tr>
+              <td>Prototype testing</td>
+              <td><!-- TODO --></td>
+              <td><!-- e.g., Complete onboarding, review a match, join a group --></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="figure">
+          <div class="figure__frame">
+            <div class="figure__placeholder">
+              📷 Paper prototype testing photos — assets/images/evaluation/paper-prototype-1.jpg
+            </div>
+          </div>
+          <figcaption class="figure__caption">Paper prototype testing session</figcaption>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--purple">
+      <div class="container">
+        <h2>Results</h2>
+
+        <h3>What worked well</h3>
+        <div class="finding-card finding-card--success">
+          <p><strong>[Finding 1]</strong> — e.g., Users understood the match reasoning when shown plain-language explanations.</p>
+        </div>
+        <div class="finding-card finding-card--success">
+          <p><strong>[Finding 2]</strong> — e.g., Profile preview reduced anxiety about joining an unknown group.</p>
+        </div>
+
+        <h3>Problems users experienced</h3>
+        <div class="finding-card finding-card--issue">
+          <div class="finding-card__severity">Major</div>
+          <p><strong>[Issue 1]</strong> — [Describe usability problem and impact]</p>
+        </div>
+        <div class="finding-card finding-card--issue">
+          <div class="finding-card__severity">Minor</div>
+          <p><strong>[Issue 2]</strong> — [Describe friction point]</p>
+        </div>
+
+        <h3>Testing results matrix</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Feature / Task</th>
+              <th>Result</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row--success">
+              <td>[Task 1]</td>
+              <td>Passed</td>
+              <td><!-- notes --></td>
+            </tr>
+            <tr class="row--warning">
+              <td>[Task 2]</td>
+              <td>Partial</td>
+              <td><!-- notes --></td>
+            </tr>
+            <tr class="row--danger">
+              <td>[Task 3]</td>
+              <td>Failed</td>
+              <td><!-- notes --></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="figure">
+          <div class="figure__frame">
+            <div class="figure__placeholder">
+              📷 Testing results table screenshot — paste from FigJam col 5
+            </div>
+          </div>
+          <figcaption class="figure__caption">Red / yellow / green testing results (from process board)</figcaption>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--yellow">
+      <div class="container container--narrow">
+        <h2>What We Learned</h2>
+        <ul>
+          <li>[Learning 1 — how evaluation changed your design thinking]</li>
+          <li>[Learning 2 — e.g., onboarding length vs. match quality trade-off]</li>
+          <li>[Learning 3 — link back to <a href="../index.html#rationale">design rationale</a> changes]</li>
+        </ul>
+
+        <div class="callout callout--insight">
+          <strong>Key takeaway:</strong> [Summarize the most important evaluation insight]
+        </div>
+
+        <p style="margin-top:var(--space-xl)">
+          <a href="../index.html#rationale" class="btn btn--secondary">← Design Rationale</a>
+          <a href="../solution/" class="btn btn--primary">View Solution →</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div><strong>StudyMatch</strong><br>INFO 360 · UW · Spring 2026</div>
+      <div><a href="../index.html">← Back to case study</a></div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
