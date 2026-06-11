@@ -1,192 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evaluation — StudyMatch</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/tokens.css">
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Evaluation | StudyHub</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="../assets/css/tokens.css">
+ <link rel="stylesheet" href="../assets/css/base.css">
+ <link rel="stylesheet" href="../assets/css/components.css">
+ <link rel="stylesheet" href="../assets/css/pages.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="../index.html" class="site-logo">StudyMatch</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
-      <nav class="site-nav" aria-label="Main">
-        <a href="../index.html#problem">Problem</a>
-        <a href="../index.html#rationale">Rationale</a>
-        <a href="../solution/">Solution</a>
-        <a href="../evaluation/" class="is-active">Evaluation</a>
-        <a href="../index.html#reflection">Reflection</a>
-      </nav>
-    </div>
-  </header>
+ <header class="site-header">
+ <div class="container site-header__inner">
+ <a href="../index.html" class="site-logo">StudyHub</a>
+ <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+ </button>
+ <nav class="site-nav" aria-label="Main">
+ <a href="../index.html#problem">Problem</a>
+ <a href="../index.html#rationale">Rationale</a>
+ <a href="../solution/">Solution</a>
+ <a href="../evaluation/" class="is-active">Evaluation</a>
+ <a href="../index.html#reflection">Reflection</a>
+ </nav>
+ </div>
+ </header>
 
-  <main>
-    <section class="section section--orange">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../index.html">Home</a> → Evaluation
-        </nav>
+ <main>
+ <section class="section section--orange">
+ <div class="container">
+ <nav class="breadcrumb" aria-label="Breadcrumb">
+ <a href="../index.html">Home</a> → Evaluation
+ </nav>
 
-        <header class="section-header">
-          <span class="section-header__number">02 — Evaluation</span>
-          <h2>How We Evaluated the Design</h2>
-          <span class="placeholder-badge">Content in progress</span>
-          <p class="section-header__intro">Methods, participants, tasks, findings, and what we learned.</p>
-        </header>
+ <header class="section-header">
+ <span class="section-header__number">02 · Evaluation</span>
+ <h2>How We Evaluated the Design</h2>
+ <p class="section-header__intro">Think-aloud usability testing, Wizard of Oz prototyping, and Nielsen heuristic evaluation.</p>
+ </header>
 
         <h3>Methods</h3>
         <div class="method-chips">
+          <span class="method-chip">Think-aloud usability testing</span>
+          <span class="method-chip">Wizard of Oz</span>
           <span class="method-chip">Semi-structured interviews</span>
           <span class="method-chip">Survey</span>
-          <span class="method-chip">Paper prototype testing</span>
-          <span class="method-chip">Heuristic evaluation</span>
-          <span class="method-chip">User feedback</span>
+          <span class="method-chip">Nielsen heuristic evaluation</span>
+          <span class="method-chip">Expert feedback</span>
+          <span class="method-chip">Peer feedback</span>
         </div>
-        <p><em>[Add or remove methods based on what you actually ran for prototype evaluation]</em></p>
+
+ <h3>Testing approach</h3>
+ <p>We used think-aloud usability testing combined with a Wizard of Oz approach for the AI matching component. Because the matching algorithm was not fully built at prototype stage, a team member manually simulated match results behind the scenes while participants interacted with the interface as if it were live. Participants narrated their thoughts, hesitations, and expectations in real time.</p>
+
+ <h3>Recruitment</h3>
+        <p>We recruited 5 to 8 UW undergraduate students across a mix of class standings, majors, and self-reported social confidence levels. Recruitment prioritized students who identify as introverted or socially anxious. At least two participants were freshman students with limited existing campus connections.</p>
+ </div>
+ </section>
+
+ <section class="section section--white">
+ <div class="container">
+ <h2>Participants &amp; Tasks</h2>
+
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Method</th>
+ <th>Participants</th>
+ <th>Tasks / Focus</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Interviews (research)</td>
+ <td>3 freshman students</td>
+ <td>Open-ended questions on study habits, group formation, compatibility</td>
+ </tr>
+ <tr>
+ <td>Survey (research)</td>
+ <td>10 students (fraternity GroupMe)</td>
+ <td>Rank compatibility factors; rate struggles finding groups</td>
+ </tr>
+ <tr>
+ <td>Usability Test 1</td>
+ <td>Testing Group #7 (Everwell)</td>
+ <td>Account creation, profile setup, personality test, schedule setup</td>
+ </tr>
+ <tr>
+ <td>Usability Test 2</td>
+ <td>Testing Group #1</td>
+ <td>Same onboarding flow with revised prototype</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <h3>Task scenarios</h3>
+ <ol>
+ <li>Complete the onboarding survey and set privacy preferences</li>
+ <li>Review your first match and decide whether to accept or decline</li>
+ <li>Read the match reasoning card and explain why you think you were paired</li>
+ <li>Schedule a first session with your matched group using the in-app scheduler</li>
+ <li>Set a shared goal with your group before your first meeting</li>
+ <li>Find and add a note to the group board</li>
+ </ol>
+
+ <h3>Test goals</h3>
+ <ul>
+ <li>Determine whether the match reasoning card gives students enough information to feel safe committing</li>
+ <li>Identify points in the onboarding flow where students hesitate, drop off, or feel the privacy ask is too large</li>
+ </ul>
+
+ <div class="figure">
+ <div class="figure__frame">
+ <div class="figure__placeholder">
+ Paper prototype testing (photos). Add file: assets/images/evaluation/paper-prototype.jpg
+ </div>
+ </div>
+ <figcaption class="figure__caption">Prototype testing session</figcaption>
+ </div>
+ </div>
+ </section>
+
+ <section class="section section--purple">
+ <div class="container">
+ <h2>Usability Test 1 · Results</h2>
+ <p><strong>Evaluators:</strong> Testing Group #7 (Everwell). UW undergraduates matching our target profile, with at least one freshman with limited campus connections.</p>
+
+ <h3>What worked well</h3>
+ <div class="finding-card finding-card--success">
+ <p><strong>Account creation flow</strong>: Entering UW NetID credentials and submitting the form was completed without significant hesitation. Participants understood the general purpose of the onboarding sequence and moved through early screens with reasonable confidence.</p>
+ </div>
+
+ <h3>Problems users experienced</h3>
+ <div class="finding-card finding-card--issue">
+ <div class="finding-card__severity">Major</div>
+ <p><strong>Personality test discoverability</strong>: Users had difficulty locating the entry point for the personality quiz. The button was not visually prominent enough. Given that the personality survey is the foundation of the entire matching system, this was a critical failure point.</p>
+ </div>
+ <div class="finding-card finding-card--issue">
+ <div class="finding-card__severity">Major</div>
+ <p><strong>Schedule setup friction</strong>: Participants struggled with the schedule-filling interface. The page lacked sufficient prompts or guidance, leaving users uncertain about what level of detail was expected. Socially anxious users are unlikely to push through ambiguous interfaces on their own.</p>
+ </div>
+
+ <h2>Usability Test 2 · Results</h2>
+ <p><strong>Evaluators:</strong> Testing Group #1. Same prototype methodology with a different participant set for cross-validation.</p>
+
+ <div class="finding-card finding-card--issue">
+ <div class="finding-card__severity">Major</div>
+ <p><strong>Schedule confusion persisted</strong>: Consistent with Test 1, participants expressed confusion around how to build out their schedule. This cross-session consistency validates the scheduler as a systemic design gap, not a participant-specific problem.</p>
+ </div>
+ <div class="finding-card finding-card--issue">
+ <div class="finding-card__severity">Major</div>
+ <p><strong>Missing user-state cover screens</strong>: The prototype did not account for returning users or mid-semester re-matchers. Testers noted disorientation when the interface did not match their expected state.</p>
+ </div>
+
+ <h3>Testing results summary</h3>
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Feature / Task</th>
+ <th>Result</th>
+ <th>Notes</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="row--success">
+ <td>Account creation (NetID)</td>
+ <td>Passed</td>
+ <td>Completed without hesitation in Test 1</td>
+ </tr>
+ <tr class="row--warning">
+ <td>Profile setup</td>
+ <td>Partial</td>
+ <td>Early screens clear; later steps need guidance</td>
+ </tr>
+ <tr class="row--danger">
+ <td>Personality test entry</td>
+ <td>Failed</td>
+ <td>Button not prominent enough; critical for matching</td>
+ </tr>
+ <tr class="row--danger">
+ <td>Schedule setup</td>
+ <td>Failed</td>
+ <td>Confirmed across both test rounds</td>
+ </tr>
+ <tr class="row--warning">
+ <td>User state management</td>
+ <td>Partial</td>
+ <td>No differentiated screens for returning/re-match users</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <div class="figure">
+ <div class="figure__frame">
+ <div class="figure__placeholder">
+ Testing results (table). Add file: assets/images/evaluation/testing-results.png
+ </div>
+ </div>
+ <figcaption class="figure__caption">Testing results from design process</figcaption>
+ </div>
+ </div>
+ </section>
+
+    <section class="section section--green">
+      <div class="container container--narrow">
+        <h2>Expert and Peer Feedback</h2>
+        <p>Throughout the project, classmates and course peers reviewed our prototype and process. Feedback highlighted the need for more visible buttons, simpler navigation, less cluttered pages, and a more intuitive user flow. This expert and peer input complemented formal usability sessions and informed iterations between Test 1 and Test 2.</p>
       </div>
     </section>
 
     <section class="section section--white">
       <div class="container">
-        <h2>Participants &amp; Tasks</h2>
+        <h2>Nielsen Heuristic Evaluation</h2>
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Heuristic</th>
+ <th>What works well</th>
+ <th>Issues</th>
+ <th>Improvements</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>1. Visibility of system status</td>
+ <td>Navigation bar and page titles help users know where they are</td>
+ <td>Limited feedback after actions; active page not always obvious</td>
+ <td>Add confirmation messages, loading indicators, highlight active nav</td>
+ </tr>
+ <tr>
+ <td>2. Match with real world</td>
+ <td>Familiar terms like "Groups," "Messages," "Calendar"</td>
+ <td>Some icons and preference options unclear to first-time users</td>
+ <td>Add labels/tooltips for icons</td>
+ </tr>
+ <tr>
+ <td>3. User control &amp; freedom</td>
+ <td>Bottom navigation allows free movement; some back buttons</td>
+ <td>Some pages lack cancel/exit; users may lose progress</td>
+ <td>Add Cancel, Back, and Save Draft options</td>
+ </tr>
+ <tr>
+ <td>4. Consistency &amp; standards</td>
+ <td>Consistent purple palette and similar UI components</td>
+ <td>Minor inconsistencies in spacing, alignment, button sizing</td>
+ <td>Standardize spacing, typography, icon styles</td>
+ </tr>
+ <tr>
+ <td>5. Error prevention</td>
+ <td>Step-by-step onboarding; selectable options reduce invalid input</td>
+ <td>No visible form validation or required field indicators</td>
+ <td>Add input validation and mark required fields</td>
+ </tr>
+ <tr>
+ <td>6. Recognition over recall</td>
+ <td>Persistent navigation; group cards visually displayed</td>
+ <td>Some icons rely too much on memory</td>
+ <td>Add labels beneath icons and onboarding hints</td>
+ </tr>
+ <tr>
+ <td>7. Flexibility &amp; efficiency</td>
+ <td>Quick access to major features; search supports browsing</td>
+ <td>Frequent actions require multiple taps; no shortcuts</td>
+ <td>Add quick actions and customizable dashboard</td>
+ </tr>
+ <tr>
+ <td>8. Aesthetic &amp; minimalist design</td>
+ <td>Clean, modern, visually cohesive interface</td>
+ <td>Some screens have too much empty space or low text contrast</td>
+ <td>Improve readability, contrast, visual hierarchy</td>
+ </tr>
+ <tr>
+ <td>9. Error recovery</td>
+ <td>Simple structure reduces major navigation confusion</td>
+ <td>Error messages and recovery guidance missing</td>
+ <td>Add clear error messages and recovery suggestions</td>
+ </tr>
+ <tr>
+ <td>10. Help &amp; documentation</td>
+ <td>Onboarding introduces the app's purpose effectively</td>
+ <td>No visible FAQ, tutorial, or help section</td>
+ <td>Add Help Center, FAQs, and walkthrough tutorials</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
 
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Method</th>
-              <th>Participants</th>
-              <th>Tasks / Focus</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Interviews</td>
-              <td>3 freshman students</td>
-              <td>Open-ended questions on study habits, group formation, compatibility</td>
-            </tr>
-            <tr>
-              <td>Survey</td>
-              <td>10 students (fraternity GroupMe)</td>
-              <td>Rank factors for group compatibility; rate struggles finding groups</td>
-            </tr>
-            <tr>
-              <td>Prototype testing</td>
-              <td><!-- TODO --></td>
-              <td><!-- e.g., Complete onboarding, review a match, join a group --></td>
-            </tr>
-          </tbody>
-        </table>
+ <section class="section section--yellow">
+ <div class="container container--narrow">
+ <h2>What We Learned</h2>
+ <ul>
+ <li>The onboarding flow is functional at a structural level but relies too heavily on user initiative at two critical junctures: the personality test entry and schedule setup. Confused or hesitant users are likely to disengage rather than troubleshoot.</li>
+ <li>The scheduler is the platform's highest-friction point between matching and actually meeting, as confirmed consistently across both test rounds.</li>
+ <li>New users, returning users, and re-matchers have meaningfully different needs. Tailored entry screens for each state are not cosmetic; they determine whether users land in the right context or feel disoriented.</li>
+ <li>Proposed changes (a more prominent personality test button, scheduling prompts, expanded scheduler functionality, and user-state cover screens) are directly motivated by observed behavior, not assumption.</li>
+ </ul>
 
-        <div class="figure">
-          <div class="figure__frame">
-            <div class="figure__placeholder">
-              📷 Paper prototype testing photos — assets/images/evaluation/paper-prototype-1.jpg
-            </div>
-          </div>
-          <figcaption class="figure__caption">Paper prototype testing session</figcaption>
-        </div>
-      </div>
-    </section>
+ <div class="figure">
+ <div class="figure__frame">
+ <div class="figure__placeholder">
+ User journey (map). Add file: assets/images/evaluation/user-journey-map.png
+ </div>
+ </div>
+ <figcaption class="figure__caption">User journey map</figcaption>
+ </div>
 
-    <section class="section section--purple">
-      <div class="container">
-        <h2>Results</h2>
+ <div class="callout callout--insight">
+ <strong>Key takeaway:</strong> Together, two rounds of testing provide consistent, cross-group evidence that the scheduler and user-state coverage are the two areas most likely to cause real-world drop-off among the socially anxious students StudyHub is built to serve.
+ </div>
 
-        <h3>What worked well</h3>
-        <div class="finding-card finding-card--success">
-          <p><strong>[Finding 1]</strong> — e.g., Users understood the match reasoning when shown plain-language explanations.</p>
-        </div>
-        <div class="finding-card finding-card--success">
-          <p><strong>[Finding 2]</strong> — e.g., Profile preview reduced anxiety about joining an unknown group.</p>
-        </div>
+ <p style="margin-top:var(--space-xl)">
+ <a href="../index.html#rationale" class="btn btn--secondary">← Design Rationale</a>
+ <a href="../solution/" class="btn btn--primary">View Solution →</a>
+ </p>
+ </div>
+ </section>
+ </main>
 
-        <h3>Problems users experienced</h3>
-        <div class="finding-card finding-card--issue">
-          <div class="finding-card__severity">Major</div>
-          <p><strong>[Issue 1]</strong> — [Describe usability problem and impact]</p>
-        </div>
-        <div class="finding-card finding-card--issue">
-          <div class="finding-card__severity">Minor</div>
-          <p><strong>[Issue 2]</strong> — [Describe friction point]</p>
-        </div>
+ <footer class="site-footer">
+ <div class="container site-footer__inner">
+ <div><strong>StudyHub</strong><br>INFO 360 · UW · Spring 2026</div>
+ <div><a href="../index.html">← Back to case study</a></div>
+ </div>
+ </footer>
 
-        <h3>Testing results matrix</h3>
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Feature / Task</th>
-              <th>Result</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="row--success">
-              <td>[Task 1]</td>
-              <td>Passed</td>
-              <td><!-- notes --></td>
-            </tr>
-            <tr class="row--warning">
-              <td>[Task 2]</td>
-              <td>Partial</td>
-              <td><!-- notes --></td>
-            </tr>
-            <tr class="row--danger">
-              <td>[Task 3]</td>
-              <td>Failed</td>
-              <td><!-- notes --></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="figure">
-          <div class="figure__frame">
-            <div class="figure__placeholder">
-              📷 Testing results table screenshot — paste from FigJam col 5
-            </div>
-          </div>
-          <figcaption class="figure__caption">Red / yellow / green testing results (from process board)</figcaption>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--yellow">
-      <div class="container container--narrow">
-        <h2>What We Learned</h2>
-        <ul>
-          <li>[Learning 1 — how evaluation changed your design thinking]</li>
-          <li>[Learning 2 — e.g., onboarding length vs. match quality trade-off]</li>
-          <li>[Learning 3 — link back to <a href="../index.html#rationale">design rationale</a> changes]</li>
-        </ul>
-
-        <div class="callout callout--insight">
-          <strong>Key takeaway:</strong> [Summarize the most important evaluation insight]
-        </div>
-
-        <p style="margin-top:var(--space-xl)">
-          <a href="../index.html#rationale" class="btn btn--secondary">← Design Rationale</a>
-          <a href="../solution/" class="btn btn--primary">View Solution →</a>
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div><strong>StudyMatch</strong><br>INFO 360 · UW · Spring 2026</div>
-      <div><a href="../index.html">← Back to case study</a></div>
-    </div>
-  </footer>
-
-  <script src="../assets/js/main.js"></script>
+ <script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -1,177 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design Solution — StudyMatch</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/tokens.css">
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Design Solution | StudyHub</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="../assets/css/tokens.css">
+ <link rel="stylesheet" href="../assets/css/base.css">
+ <link rel="stylesheet" href="../assets/css/components.css">
+ <link rel="stylesheet" href="../assets/css/pages.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="../index.html" class="site-logo">StudyMatch</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
-      <nav class="site-nav" aria-label="Main">
-        <a href="../index.html#problem">Problem</a>
-        <a href="../index.html#rationale">Rationale</a>
-        <a href="../solution/" class="is-active">Solution</a>
-        <a href="../evaluation/">Evaluation</a>
-        <a href="../index.html#reflection">Reflection</a>
-      </nav>
-    </div>
-  </header>
+ <header class="site-header">
+ <div class="container site-header__inner">
+ <a href="../index.html" class="site-logo">StudyHub</a>
+ <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+ </button>
+ <nav class="site-nav" aria-label="Main">
+ <a href="../index.html#problem">Problem</a>
+ <a href="../index.html#rationale">Rationale</a>
+ <a href="../solution/" class="is-active">Solution</a>
+ <a href="../evaluation/">Evaluation</a>
+ <a href="../index.html#reflection">Reflection</a>
+ </nav>
+ </div>
+ </header>
 
-  <main>
-    <section class="section section--pink">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../index.html">Home</a> → Design Solution
-        </nav>
+ <main>
+ <section class="section section--pink">
+ <div class="container">
+ <nav class="breadcrumb" aria-label="Breadcrumb">
+ <a href="../index.html">Home</a> → Design Solution
+ </nav>
 
-        <header class="section-header">
-          <span class="section-header__number">04 — Design Solution</span>
-          <h2>The Design Solution</h2>
-          <span class="placeholder-badge">Content in progress</span>
-          <p class="section-header__intro">An AI-powered platform that matches UW students into compatible, class-wise study groups based on schedule, personality, learning style, and interests.</p>
-        </header>
+ <header class="section-header">
+ <span class="section-header__number">04 · Design Solution</span>
+ <h2>StudyHub</h2>
+ <p class="section-header__intro">An AI-powered academic matching platform that makes collaborative learning accessible to every UW student, regardless of social confidence or existing network.</p>
+ </header>
 
-        <div class="callout callout--insight">
-          <strong>Core concept:</strong> Proactively pair students before the awkward "does anyone want to study?" moment — reducing social risk with profile previews, transparent match reasoning, and a structured first session.
-        </div>
+ <div class="callout callout--insight">
+ <strong>Value proposition:</strong> StudyHub exists because collaborative learning has never been equally accessible. Study groups have always formed through proximity, existing friendships, and social confidence, systematically excluding students who are introverted, socially anxious, or simply new to campus. Our platform closes that gap by combining AI-powered personality and academic matching with the trust infrastructure students need to actually show up.
+ </div>
 
-        <div class="figure">
-          <div class="figure__frame">
-            <div class="figure__placeholder">
-              <!-- assets/images/solution/hero-mockup.png -->
-              📷 Hero mockup / final product screenshot
-            </div>
-          </div>
-          <figcaption class="figure__caption">High-fidelity prototype — main screen</figcaption>
-        </div>
-      </div>
-    </section>
+ <div class="figure">
+ <div class="figure__frame">
+ <div class="figure__placeholder">
+ Hi-fi prototype (screenshot). Add file: assets/images/solution/hifi-prototype.png
+ </div>
+ </div>
+ <figcaption class="figure__caption">
+ High-fidelity prototype.
+ <a href="https://www.figma.com/design/SuBMyD73Ybk0Q3d4NFE3DP/StudyAI?node-id=0-1" target="_blank" rel="noopener">view in Figma</a>
+ </figcaption>
+ </div>
+ </div>
+ </section>
 
-    <section class="section section--white">
-      <div class="container">
-        <h2>How Users Interact</h2>
-        <p class="placeholder-text">[Describe the end-to-end flow: onboarding → profile setup → match reveal → first session]</p>
+ <section class="section section--white">
+ <div class="container container--narrow">
+ <h2>Core Concept</h2>
+ <p>StudyHub addresses the accessibility gap in collaborative learning through a web-based platform that removes the social and technical barriers preventing students from forming effective study groups. The solution works in three phases:</p>
+ <ol>
+ <li><strong>Build trust</strong>: personality and learning style onboarding survey, privacy controls, and verified profiles so students feel safe before committing.</li>
+ <li><strong>Surface matches</strong>: compatible matches by course with plain-language reasoning so students understand why they were paired.</li>
+ <li><strong>Support follow-through</strong>: shared goal setting, in-app scheduling, a collaborative group board, and streak tracking so groups don't just form but actually stick.</li>
+ </ol>
+ <p>Unlike existing tools that rely on proximity, existing friendships, or unmoderated group chats, StudyHub focuses on trust-first matching, personality-aware pairing, introvert-centered design, transparent AI explanations, social proof adoption, and structured first-session facilitation.</p>
+ </div>
+ </section>
 
-        <div class="figure">
-          <div class="figure__frame">
-            <div class="figure__placeholder">
-              <!-- assets/images/solution/user-flow.png -->
-              📷 User flow diagram — paste from FigJam col 6
-            </div>
-          </div>
-          <figcaption class="figure__caption">User flow diagram</figcaption>
-        </div>
-      </div>
-    </section>
+ <section class="section section--purple">
+ <div class="container">
+ <h2>How Users Interact</h2>
+ <p>Students create an account with UW NetID credentials, complete a personality test and schedule setup, review AI-suggested matches with plain-language reasoning, accept or decline matches, schedule a first session, set shared group goals, and collaborate on a group board, all before their first in-person meeting.</p>
 
-    <section class="section section--purple">
-      <div class="container">
-        <h2>Key Features</h2>
+ <div class="figure">
+ <div class="figure__frame">
+ <div class="figure__placeholder">
+ User flow (chart). Add file: assets/images/solution/user-flow.png
+ </div>
+ </div>
+ <figcaption class="figure__caption">User flow diagram</figcaption>
+ </div>
+ </div>
+ </section>
 
-        <div class="feature-block">
-          <div class="feature-block__text">
-            <h3>1. Smart onboarding</h3>
-            <p>Collect class enrollment, availability, learning type, personality, and club involvement through a guided flow inspired by Co-Learn's preference pattern.</p>
-            <p><em>[Add your rationale for onboarding design decisions]</em></p>
-          </div>
-          <div class="feature-block__visual">
-            <div class="figure__frame">
-              <div class="figure__placeholder">📷 Onboarding screens</div>
-            </div>
-          </div>
-        </div>
+ <section class="section section--green">
+ <div class="container">
+ <h2>Personas &amp; Stakeholders</h2>
 
-        <div class="feature-block">
-          <div class="feature-block__text">
-            <h3>2. Match preview &amp; reasoning</h3>
-            <p>Show plain-language explanations for every match so students understand <em>why</em> before committing — addressing algorithm skepticism from research.</p>
-          </div>
-          <div class="feature-block__visual">
-            <div class="figure__frame">
-              <div class="figure__placeholder">📷 Match preview screen</div>
-            </div>
-          </div>
-        </div>
+ <div class="card-grid">
+ <div class="card">
+ <h3>Maya Chen · Direct user</h3>
+ <p><strong>Freshman · Computer Science · Age 18</strong></p>
+ <p>Maya moved to Seattle from out of state and doesn't know anyone in her classes. She's introverted and finds it hard to approach strangers in large lecture halls. She defaults to studying alone even when she'd prefer a group.</p>
+ <p><strong>Needs:</strong> Low-stakes entry, visible profiles before committing, transparent match reasoning, reputation signals.</p>
+ </div>
+ <div class="card">
+ <h3>Dr. David Pak · Indirect stakeholder</h3>
+ <p><strong>Lecturer · UW College of Engineering</strong></p>
+ <p>David teaches a 200-person intro engineering course. He notices students struggle to collaborate, reflected in project quality and drop rates. He doesn't have bandwidth to facilitate study group formation himself.</p>
+ <p><strong>Relationship:</strong> Benefits when students perform better and could be an institutional advocate if outcomes are demonstrable.</p>
+ </div>
+ </div>
 
-        <div class="feature-block">
-          <div class="feature-block__text">
-            <h3>3. Structured first session</h3>
-            <p>Remove ambiguity for introverts with a guided first group session — icebreakers, agenda, and low-stakes goals.</p>
-          </div>
-          <div class="feature-block__visual">
-            <div class="figure__frame">
-              <div class="figure__placeholder">📷 First session screen</div>
-            </div>
-          </div>
-        </div>
+ <div class="figure" style="margin-top:var(--space-xl)">
+ <div class="figure__frame">
+ <div class="figure__placeholder">
+ Stakeholder (map). Add file: assets/images/solution/stakeholder-map.png
+ </div>
+ </div>
+ <figcaption class="figure__caption">Stakeholder map</figcaption>
+ </div>
+ </div>
+ </section>
 
-        <h3>Hi-fi mockups</h3>
+ <section class="section section--white">
+ <div class="container">
+ <h2>Key Features</h2>
+
+ <h3>Must have</h3>
+ <div class="feature-block">
+ <div class="feature-block__text">
+ <h4>Onboarding survey</h4>
+ <p>Guided flow collecting class enrollment, learning type, personality (Big Five), availability, and club involvement, inspired by Co-Learn's detailed preference pattern.</p>
+ </div>
+ <div class="feature-block__visual">
+ <div class="figure__frame"><div class="figure__placeholder">Onboarding screens</div></div>
+ </div>
+ </div>
+
+ <div class="feature-block">
+ <div class="feature-block__text">
+ <h4>Personality + course matching</h4>
+ <p>AI matching system using Big Five personality data alongside course enrollment for class-wise and general study groups, with plain-language reasoning for every recommendation.</p>
+ </div>
+ <div class="feature-block__visual">
+ <div class="figure__frame"><div class="figure__placeholder">Match preview screen</div></div>
+ </div>
+ </div>
+
+ <div class="feature-block">
+ <div class="feature-block__text">
+ <h4>Privacy controls &amp; accessibility</h4>
+ <p>Students control what profile information is visible. Accessibility accommodations are built into the core experience, not treated as an afterthought.</p>
+ </div>
+ <div class="feature-block__visual">
+ <div class="figure__frame"><div class="figure__placeholder">Privacy settings screen</div></div>
+ </div>
+ </div>
+
+ <h3>Should have</h3>
+ <ul>
+ <li>Class roster integration</li>
+ <li>In-app scheduling linked to calendar apps</li>
+ <li>Group goal setting before first meetings</li>
+ <li>Verified badges for trust signals</li>
+ </ul>
+
+ <h3>Nice to have</h3>
+ <ul>
+ <li>Group streaks based on consistency</li>
+ <li>Infinite group board (FigJam-style) for shared notes and brainstorming</li>
+ </ul>
+
+ <div class="figure">
+ <div class="figure__frame">
+ <div class="figure__placeholder">
+ Feature prioritization (map). Add file: assets/images/solution/feature-prioritization.png
+ </div>
+ </div>
+ <figcaption class="figure__caption">Feature ideation and prioritization</figcaption>
+ </div>
+
+        <h3>Interface mockups</h3>
         <div class="mockup-strip">
-          <div class="mockup-strip__item">
-            <div class="mockup-strip__screen">Screen 1</div>
-            <div class="mockup-strip__label">Home</div>
+ <div class="mockup-strip__item">
+ <div class="mockup-strip__screen">Home</div>
+ <div class="mockup-strip__label">Home</div>
+ </div>
+ <div class="mockup-strip__item">
+ <div class="mockup-strip__screen">Profile</div>
+ <div class="mockup-strip__label">Profile</div>
+ </div>
+ <div class="mockup-strip__item">
+ <div class="mockup-strip__screen">Matches</div>
+ <div class="mockup-strip__label">Matches</div>
+ </div>
+ <div class="mockup-strip__item">
+ <div class="mockup-strip__screen">Group</div>
+ <div class="mockup-strip__label">Group</div>
+ </div>
+ <div class="mockup-strip__item">
+ <div class="mockup-strip__screen">Session</div>
+ <div class="mockup-strip__label">Session</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <section class="section section--yellow">
+ <div class="container">
+ <h2>Design Process</h2>
+ <p>From low-fidelity sketches to high-fidelity prototypes.</p>
+
+ <div class="card-grid">
+          <div class="card">
+            <div class="figure__frame" style="min-height:160px">
+              <img src="../assets/images/solution/lofi-1.png" alt="Low-fidelity prototype screen 1">
+            </div>
+            <h4>Low-fi prototype 1</h4>
           </div>
-          <div class="mockup-strip__item">
-            <div class="mockup-strip__screen">Screen 2</div>
-            <div class="mockup-strip__label">Profile</div>
+          <div class="card">
+            <div class="figure__frame" style="min-height:160px">
+              <img src="../assets/images/solution/lofi-2.png" alt="Low-fidelity prototype screen 2">
+            </div>
+            <h4>Low-fi prototype 2</h4>
           </div>
-          <div class="mockup-strip__item">
-            <div class="mockup-strip__screen">Screen 3</div>
-            <div class="mockup-strip__label">Matches</div>
-          </div>
-          <div class="mockup-strip__item">
-            <div class="mockup-strip__screen">Screen 4</div>
-            <div class="mockup-strip__label">Group</div>
-          </div>
-          <div class="mockup-strip__item">
-            <div class="mockup-strip__screen">Screen 5</div>
-            <div class="mockup-strip__label">Session</div>
-          </div>
+ <div class="card">
+ <div class="figure__frame" style="min-height:160px">
+ <div class="figure__placeholder">Lo-fi prototype 3</div>
+ </div>
+ <h4>Low-fi prototype 3</h4>
+ </div>
         </div>
-        <p class="figure__caption">Replace with exported mockups: assets/images/solution/mockup-01.png … mockup-05.png</p>
-      </div>
-    </section>
 
-    <section class="section section--green">
-      <div class="container">
-        <h2>Design Process</h2>
-        <p>From low-fidelity sketches to high-fidelity prototypes.</p>
-
-        <div class="card-grid">
-          <div class="card">
-            <div class="figure__frame" style="min-height:160px">
-              <div class="figure__placeholder">📷 Wireframe sketches</div>
-            </div>
-            <h4>Low-fi sketches</h4>
-            <p>Paper and digital wireframes from ideation.</p>
+        <h3>Annotated mockups</h3>
+        <p>Key screens call out design decisions tied to research: prominent personality test entry (post-usability testing), match reasoning cards, privacy controls, and scheduler guidance prompts.</p>
+        <div class="figure">
+          <div class="figure__frame">
+            <div class="figure__placeholder">Annotated hi-fi mockup (add image)</div>
           </div>
-          <div class="card">
-            <div class="figure__frame" style="min-height:160px">
-              <div class="figure__placeholder">📷 Paper prototypes</div>
-            </div>
-            <h4>Paper prototypes</h4>
-            <p>Physical prototypes used in early testing.</p>
-          </div>
-          <div class="card">
-            <div class="figure__frame" style="min-height:160px">
-              <div class="figure__placeholder">📷 Hi-fi screens</div>
-            </div>
-            <h4>High-fidelity</h4>
-            <p>Final visual design and interaction patterns.</p>
-          </div>
+          <figcaption class="figure__caption">Annotated interface mockup explaining key design decisions</figcaption>
         </div>
 
         <h3>Storyboard</h3>
@@ -183,36 +248,30 @@
           <div class="storyboard__panel">Panel 5</div>
           <div class="storyboard__panel">Panel 6</div>
         </div>
-        <p class="figure__caption">6-panel storyboard — assets/images/solution/storyboard.png</p>
-
-        <div class="figure" style="margin-top:var(--space-2xl)">
-          <div class="figure__frame">
-            <div class="figure__placeholder">
-              📷 Feature matrix / site map — paste from FigJam col 6
-            </div>
-          </div>
-          <figcaption class="figure__caption">Information architecture / feature audit</figcaption>
-        </div>
+        <p class="figure__caption">Six-panel storyboard of a student using StudyHub from onboarding to first group session</p>
       </div>
     </section>
 
     <section class="section section--white">
       <div class="container container--narrow">
         <h2>How It Addresses the Problem</h2>
-        <p>[Connect solution features back to the problem: first-years without networks, schedule/personality mismatch, social anxiety, lack of intelligent pre-matching in existing tools.]</p>
-        <p><a href="../index.html#problem" class="btn btn--secondary">← Back to Problem</a>
-           <a href="../index.html#rationale" class="btn btn--secondary">Design Rationale</a></p>
-      </div>
-    </section>
-  </main>
+ <p>StudyHub directly targets the students our research identified as most underserved: first-years without networks, introverted and socially anxious students, and commuters who can't rely on proximity. By matching on schedule, personality, and learning style before any awkward outreach, providing transparent reasoning to combat algorithm skepticism, and structuring the first session to reduce social risk, the platform addresses the behavioral gap that tools like Discord and GroupMe leave open. Every design decision is made with the most vulnerable student in mind, because students aren't failing to find study groups because they lack tools; they're failing because the social risk feels too high.</p>
+ <p>
+ <a href="../index.html#problem" class="btn btn--secondary">← Back to Problem</a>
+ <a href="../index.html#rationale" class="btn btn--secondary">Design Rationale</a>
+ <a href="../evaluation/" class="btn btn--primary">See Evaluation →</a>
+ </p>
+ </div>
+ </section>
+ </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div><strong>StudyMatch</strong><br>INFO 360 · UW · Spring 2026</div>
-      <div><a href="../index.html">← Back to case study</a></div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container site-footer__inner">
+ <div><strong>StudyHub</strong><br>INFO 360 · UW · Spring 2026</div>
+ <div><a href="../index.html">← Back to case study</a></div>
+ </div>
+ </footer>
 
-  <script src="../assets/js/main.js"></script>
+ <script src="../assets/js/main.js"></script>
 </body>
 </html>
