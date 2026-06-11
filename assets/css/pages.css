@@ -127,15 +127,53 @@
 }
 
 /* Prototype page */
-.prototype-hero {
-  padding-bottom: var(--space-xl);
+.prototype-page .site-header {
+  position: relative;
+}
+
+.prototype-main {
+  padding: var(--space-xl) 0 var(--space-3xl);
+  background: var(--section-white);
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.prototype-main__inner {
+  max-width: var(--content-wide);
+}
+
+.prototype-main__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.prototype-main__header h1 {
+  font-size: var(--text-3xl);
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+.prototype-main__header p {
+  color: var(--color-text-muted);
+  max-width: 36rem;
+  margin: 0 auto var(--space-lg);
 }
 
 .prototype-toolbar {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
-  margin-top: var(--space-lg);
+  justify-content: center;
+}
+
+.prototype-center {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 280px);
+  gap: var(--space-2xl);
+  align-items: start;
+  justify-items: center;
+}
+
+.prototype-hero {
+  padding-bottom: var(--space-xl);
 }
 
 .prototype-stage-section {
@@ -177,19 +215,17 @@
 }
 
 .phone-frame__screen {
+  position: relative;
   border-radius: 36px;
   overflow: hidden;
   background: #000;
   aspect-ratio: 402 / 874;
   width: 100%;
-  line-height: 0;
-}
-
-.phone-frame__screen iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
+  max-width: 100%;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
 }
 
 .phone-frame__home-indicator {
@@ -233,33 +269,15 @@
   margin-bottom: 0;
 }
 
-.phone-frame:fullscreen {
-  width: auto;
-  max-width: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-xl);
-  background: #0f0f18;
-}
-
-.phone-frame:fullscreen .phone-frame__bezel {
-  max-height: 95vh;
-  width: auto;
-  aspect-ratio: 402 / 920;
-}
-
-.phone-frame:fullscreen .phone-frame__screen {
-  height: calc(95vh - 80px);
-  aspect-ratio: auto;
-}
-
 @media (max-width: 900px) {
-  .prototype-layout {
+  .prototype-layout,
+  .prototype-center {
     grid-template-columns: 1fr;
   }
 
   .prototype-sidebar {
     order: 2;
+    width: 100%;
+    max-width: 402px;
   }
 }

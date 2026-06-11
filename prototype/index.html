@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive Prototype | StudyHub</title>
-  <meta name="description" content="Try the StudyHub Figma prototype: tap through onboarding, matching, groups, and messaging.">
+  <meta name="description" content="Try the StudyHub interactive prototype: onboarding, matching, groups, and messaging.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Encode+Sans:wght@400;500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/tokens.css">
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/prototype-app.css">
 </head>
-<body>
+<body class="prototype-page">
 
   <header class="site-header">
     <div class="container site-header__inner">
@@ -32,69 +33,408 @@
     </div>
   </header>
 
-  <main>
-    <section class="section section--purple prototype-hero">
-      <div class="container">
+  <main class="prototype-main">
+    <div class="container prototype-main__inner">
+      <header class="prototype-main__header">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="../index.html">Home</a> → Implementation / Prototype
         </nav>
-
-        <header class="section-header">
-          <span class="section-header__number">Implementation</span>
-          <h2>Interactive Prototype</h2>
-          <p class="section-header__intro">Try StudyHub in a phone frame. Tap buttons and hotspots to walk through the full Figma prototype with live interactions.</p>
-        </header>
-
+        <h1>Interactive Prototype</h1>
+        <p>Tap through StudyHub in the phone frame below. All screens are built with HTML, CSS, and JavaScript based on our Figma design.</p>
         <div class="prototype-toolbar">
-          <a href="https://www.figma.com/proto/SuBMyD73Ybk0Q3d4NFE3DP/StudyAI?node-id=1-2&amp;starting-point-node-id=1-2" class="btn btn--secondary" target="_blank" rel="noopener">Open in Figma</a>
-          <button type="button" class="btn btn--primary" id="fullscreen-btn">Fullscreen</button>
-          <button type="button" class="btn btn--secondary" id="restart-btn">Restart flow</button>
+          <button type="button" class="btn btn--primary" id="restart-btn">Restart</button>
+          <a href="https://www.figma.com/design/SuBMyD73Ybk0Q3d4NFE3DP/StudyAI?node-id=0-1" class="btn btn--secondary" target="_blank" rel="noopener">View in Figma</a>
         </div>
-      </div>
-    </section>
+      </header>
 
-    <section class="section section--white prototype-stage-section">
-      <div class="container prototype-layout">
-        <div class="prototype-stage">
-          <div class="phone-frame" id="phone-frame">
-            <div class="phone-frame__bezel">
-              <div class="phone-frame__speaker"></div>
-              <div class="phone-frame__screen">
-                <iframe
-                  id="figma-prototype"
-                  title="StudyHub interactive Figma prototype"
-                  loading="lazy"
-                  allowfullscreen
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+      <div class="prototype-center">
+        <div class="phone-frame" id="phone-frame">
+          <div class="phone-frame__bezel">
+            <div class="phone-frame__speaker"></div>
+            <div class="phone-frame__screen">
+              <div class="studyhub-app" id="studyhub-app">
+                <div class="sh-screen-area">
+
+                  <!-- Start -->
+                  <section class="app-screen app-screen--purple is-active" data-screen="start">
+                    <div class="sh-start">
+                      <h1 class="sh-start__logo"><span>STUDY</span><span>HUB</span></h1>
+                      <p class="sh-start__tagline">Streamlining the studying experience at the University of Washington</p>
+                      <button type="button" class="sh-btn sh-btn--white" data-go="signin">Sign-in</button>
+                    </div>
+                  </section>
+
+                  <!-- UW Sign in -->
+                  <section class="app-screen" data-screen="signin">
+                    <div class="sh-signin">
+                      <img
+                        class="sh-signin__logo"
+                        src="../assets/images/prototype/uw-logo.png"
+                        alt="University of Washington"
+                        width="242"
+                        height="119"
+                      >
+                      <p class="sh-signin__heading">Please sign in.</p>
+                      <div class="sh-signin__form">
+                        <div class="sh-field">
+                          <label for="netid">UW NetId:</label>
+                          <input id="netid" class="sh-input sh-input--netid" type="text" value="Isaiahj67" autocomplete="username">
+                        </div>
+                        <div class="sh-field">
+                          <label for="password">Password:</label>
+                          <input id="password" class="sh-input" type="password" value="password" autocomplete="current-password">
+                        </div>
+                        <button type="button" class="sh-link">Forgot your password?</button>
+                      </div>
+                      <button type="button" class="sh-btn sh-btn--signin" data-go="profile">Sign in</button>
+                    </div>
+                  </section>
+
+                  <!-- Profile Set-Up -->
+                  <section class="app-screen" data-screen="profile">
+                    <h2 class="sh-screen-header">Profile Set-Up</h2>
+                    <div class="sh-profile-top">
+                      <div class="sh-avatar">IJ</div>
+                      <p class="sh-profile-name">Isaiah Jones</p>
+                    </div>
+                    <div class="sh-profile-row">
+                      <div class="sh-profile-col">
+                        <h3>Academic Info</h3>
+                        <div class="sh-chip-row">
+                          <span class="sh-btn sh-btn--pill-sm">Year</span>
+                          <span class="sh-btn sh-btn--pill-sm">Major</span>
+                          <span class="sh-btn sh-btn--pill-sm">Classes</span>
+                        </div>
+                      </div>
+                      <div class="sh-profile-col">
+                        <h3>Personalization</h3>
+                        <button type="button" class="sh-btn sh-btn--pill-sm" data-go="personal-intro">Start</button>
+                      </div>
+                    </div>
+                    <p class="sh-section-label">Availability</p>
+                    <div class="sh-profile-actions">
+                      <button type="button" class="sh-btn sh-btn--pill-sm">Set Availability</button>
+                    </div>
+                    <div class="sh-availability-grid" aria-label="Weekly availability">
+                      <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                      <div class="sh-slot"></div><div class="sh-slot"></div><div class="sh-slot is-selected"></div><div class="sh-slot"></div><div class="sh-slot is-selected"></div><div class="sh-slot"></div><div class="sh-slot"></div>
+                      <div class="sh-slot"></div><div class="sh-slot is-selected"></div><div class="sh-slot"></div><div class="sh-slot"></div><div class="sh-slot"></div><div class="sh-slot"></div><div class="sh-slot"></div>
+                    </div>
+                    <p class="sh-section-label">Study time preference</p>
+                    <div class="sh-checkbox-list">
+                      <label class="sh-checkbox-item is-checked"><input type="checkbox" checked> Morning</label>
+                      <label class="sh-checkbox-item"><input type="checkbox"> Afternoon</label>
+                      <label class="sh-checkbox-item is-checked"><input type="checkbox" checked> Evening</label>
+                      <label class="sh-checkbox-item"><input type="checkbox"> Custom</label>
+                    </div>
+                    <div class="sh-profile-actions">
+                      <button type="button" class="sh-btn sh-btn--purple sh-btn--block sh-profile-finish" data-go="dashboard" data-toast="Welcome to StudyHub!">Finish</button>
+                    </div>
+                  </section>
+
+                  <!-- Personalization intro -->
+                  <section class="app-screen" data-screen="personal-intro">
+                    <div class="sh-personal-intro">
+                      <h2>Personalization</h2>
+                      <p>In order to deliver the best study group experience, we would like to ask some personal questions to help us learn more about you. These questions are 100% optional and we will only use this information to curate study groups that align best with your preferences. If you would like to opt out, simply press "back."</p>
+                      <div class="sh-personal-actions">
+                        <button type="button" class="sh-btn sh-btn--purple" data-go="personal-q1">Start</button>
+                        <button type="button" class="sh-btn sh-btn--outline" data-go="profile">Back</button>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- Personalization Q1 -->
+                  <section class="app-screen" data-screen="personal-q1">
+                    <div class="sh-screen-header--bar">
+                      <button type="button" class="sh-btn sh-btn--pill-sm" data-go="dashboard">Exit/Save</button>
+                      <h2>Personalization</h2>
+                      <button type="button" class="sh-btn sh-btn--pill-sm" data-go="dashboard">Opt out</button>
+                    </div>
+                    <div class="sh-question">
+                      <h3>Question 1: What is your ideal study space?</h3>
+                      <div class="sh-radio-row">
+                        <label class="sh-radio-opt"><input type="radio" name="indoor"> Outdoors</label>
+                        <label class="sh-radio-opt"><input type="radio" name="indoor" checked> Indoors</label>
+                      </div>
+                      <p>Would you like to study in a........</p>
+                      <div class="sh-radio-group">
+                        <label class="sh-radio-opt"><input type="radio" name="space" checked> Coffee shop</label>
+                        <label class="sh-radio-opt"><input type="radio" name="space"> Library</label>
+                        <label class="sh-radio-opt"><input type="radio" name="space"> Dorm</label>
+                        <label class="sh-radio-opt"><input type="radio" name="space"> Other</label>
+                      </div>
+                      <button type="button" class="sh-next-link" data-go="dashboard">Next →</button>
+                    </div>
+                  </section>
+
+                  <!-- Dashboard -->
+                  <section class="app-screen has-nav" data-screen="dashboard">
+                    <div class="sh-screen-scroll">
+                      <div class="sh-dash-hero">
+                        <h2>Welcome Back, Isaiah Jones!</h2>
+                        <p>You have 5 alerts and 2 group matches!</p>
+                        <hr>
+                      </div>
+                      <p class="sh-section-label">Active Groups</p>
+                      <button type="button" class="sh-group-card" data-go="groups">
+                        <div class="sh-group-card__icon">≡</div>
+                        <div>
+                          <p class="sh-group-card__title">INFO 360 Group</p>
+                          <p class="sh-group-card__meta">INFO 360 | Next: Thu 3:00 PM</p>
+                        </div>
+                      </button>
+                      <button type="button" class="sh-group-card" data-go="groups">
+                        <div class="sh-group-card__icon">≡</div>
+                        <div>
+                          <p class="sh-group-card__title">CSE 143 Group</p>
+                          <p class="sh-group-card__meta">CSE 143 | Next: Fri 11:00 AM</p>
+                        </div>
+                      </button>
+                      <button type="button" class="sh-group-card" data-go="groups">
+                        <div class="sh-group-card__icon">≡</div>
+                        <div>
+                          <p class="sh-group-card__title">PSYCH 210 Group</p>
+                          <p class="sh-group-card__meta">PSYCH 210 | Next: Mon 5:00 PM</p>
+                        </div>
+                      </button>
+                      <div class="sh-quick-actions">
+                        <button type="button" class="sh-quick-action" data-go="search">
+                          <svg class="sh-quick-action__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+                          Search
+                        </button>
+                        <button type="button" class="sh-quick-action" data-go="matches">
+                          <svg class="sh-quick-action__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M4 18c0-2 2-3 5-3s5 1 5 3"/></svg>
+                          Matches
+                        </button>
+                        <button type="button" class="sh-quick-action" data-go="create">
+                          <svg class="sh-quick-action__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                          Create
+                        </button>
+                      </div>
+                      <div class="sh-upcoming">
+                        <h3>Upcoming</h3>
+                        <div class="sh-list-item">INFO 360 study session · Thu 3:00 PM</div>
+                        <div class="sh-list-item">CSE 143 review · Fri 11:00 AM</div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- Search -->
+                  <section class="app-screen has-nav" data-screen="search">
+                    <h2 class="sh-screen-header">Search</h2>
+                    <div class="sh-search-bar">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+                      <input id="search-input" type="search" placeholder="Search by name, class, or major">
+                    </div>
+                    <h3 class="sh-subheading">People</h3>
+                    <button type="button" class="sh-person-row" data-searchable data-go="matches">
+                      <div class="sh-avatar sh-avatar--sm">CD</div>
+                      <div><p class="sh-person-row__name">Caden Duong</p><p class="sh-person-row__meta">INFO 360 · Biology</p></div>
+                    </button>
+                    <button type="button" class="sh-person-row" data-searchable data-go="matches">
+                      <div class="sh-avatar sh-avatar--sm">RM</div>
+                      <div><p class="sh-person-row__name">Rajan Mehta</p><p class="sh-person-row__meta">INFO 360 · CS</p></div>
+                    </button>
+                    <button type="button" class="sh-person-row" data-searchable data-go="matches">
+                      <div class="sh-avatar sh-avatar--sm">ND</div>
+                      <div><p class="sh-person-row__name">Navneeth Dhamotharan</p><p class="sh-person-row__meta">CSE 143 · CS</p></div>
+                    </button>
+                    <h3 class="sh-subheading">Groups</h3>
+                    <button type="button" class="sh-group-row" data-searchable data-go="groups">
+                      <div class="sh-avatar sh-avatar--sm">≡</div>
+                      <div><p class="sh-person-row__name">INFO 360 Group</p><p class="sh-person-row__meta">4 members · Active</p></div>
+                    </button>
+                    <button type="button" class="sh-group-row" data-searchable data-go="groups">
+                      <div class="sh-avatar sh-avatar--sm">≡</div>
+                      <div><p class="sh-person-row__name">CSE 143 Study</p><p class="sh-person-row__meta">3 members · Active</p></div>
+                    </button>
+                  </section>
+
+                  <!-- Matches -->
+                  <section class="app-screen has-nav" data-screen="matches">
+                    <h2 class="sh-screen-header">Matches</h2>
+                    <div class="sh-filters">
+                      <button type="button" class="sh-filter-chip">INFO 360</button>
+                      <button type="button" class="sh-filter-chip">Refresh</button>
+                    </div>
+                    <div class="sh-matches-grid">
+                      <button type="button" class="sh-match-card" data-match="caden">
+                        <p class="sh-match-card__name">👤 Caden Duong</p>
+                        <p class="sh-match-card__tags">Biology McCarty<br>INFO 360</p>
+                      </button>
+                      <button type="button" class="sh-match-card" data-match="rajan">
+                        <p class="sh-match-card__name">👤 Rajan Mehta</p>
+                        <p class="sh-match-card__tags">Biology McCarty<br>INFO 360</p>
+                      </button>
+                      <button type="button" class="sh-match-card" data-match="nav">
+                        <p class="sh-match-card__name">👤 Nav</p>
+                        <p class="sh-match-card__tags">Biology McCarty<br>CSE 143</p>
+                      </button>
+                      <button type="button" class="sh-match-card" data-match="isaiah">
+                        <p class="sh-match-card__name">👤 Isaiah Jones</p>
+                        <p class="sh-match-card__tags">Biology McCarty<br>PSYCH 210</p>
+                      </button>
+                    </div>
+                    <button type="button" class="sh-connect-btn" id="connect-btn" data-go="connect" disabled>Request to Form</button>
+                    <p class="sh-hint">*Requires a minimum of two people to form a group</p>
+                  </section>
+
+                  <!-- Create -->
+                  <section class="app-screen has-nav" data-screen="create">
+                    <h2 class="sh-screen-header">Create</h2>
+                    <div class="sh-screen-body">
+                      <div class="sh-form-row">
+                        <div class="sh-form-group">
+                          <label for="create-class">Class</label>
+                          <select id="create-class">
+                            <option>INFO 360</option>
+                            <option>CSE 143</option>
+                            <option>PSYCH 210</option>
+                          </select>
+                        </div>
+                        <div class="sh-form-group">
+                          <label for="create-size">Size</label>
+                          <select id="create-size">
+                            <option>3-4</option>
+                            <option>5-6</option>
+                            <option>7+</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="sh-form-group">
+                        <label>GPA Range (Optional)</label>
+                        <div class="sh-range-row">
+                          <span>2.0</span>
+                          <input type="range" min="0" max="40" value="30">
+                          <span>4.0</span>
+                        </div>
+                      </div>
+                      <div class="sh-toggle-row">
+                        <span>Visibility</span>
+                        <button type="button" class="sh-toggle is-on" id="visibility-toggle" aria-label="Toggle public visibility"></button>
+                      </div>
+                      <div class="sh-form-group">
+                        <label for="create-comments">Special Comments:</label>
+                        <textarea id="create-comments" rows="4" placeholder="Search/Invite Friends"></textarea>
+                      </div>
+                      <button type="button" class="sh-btn sh-btn--purple sh-btn--block" data-go="create-group">Form Group</button>
+                    </div>
+                  </section>
+
+                  <!-- Active Groups -->
+                  <section class="app-screen has-nav" data-screen="groups">
+                    <h2 class="sh-screen-header">Active Groups</h2>
+                    <button type="button" class="sh-sort-bar">Sort by</button>
+                    <button type="button" class="sh-group-tile" data-go="messages" data-toast="Opened group chat">
+                      <h4>Info 340</h4>
+                      <p><strong>Members:</strong> Caden Duong, Nav</p>
+                    </button>
+                    <button type="button" class="sh-group-tile">
+                      <h4>INFO 360</h4>
+                      <p><strong>Members:</strong> Rajan Mehta, Isaiah Jones</p>
+                    </button>
+                    <button type="button" class="sh-group-tile">
+                      <h4>PSYCH 210</h4>
+                      <p><strong>Members:</strong> Caden Duong, Nav</p>
+                    </button>
+                  </section>
+
+                  <!-- Messages -->
+                  <section class="app-screen has-nav" data-screen="messages">
+                    <h2 class="sh-screen-header">Messages</h2>
+                    <button type="button" class="sh-thread" data-go="chat" data-chat="Caden Duong">
+                      <p class="sh-thread__name">Caden Duong</p>
+                      <p class="sh-thread__preview">Re: Questions about work · 5:30 AM · 9/11</p>
+                    </button>
+                    <button type="button" class="sh-thread" data-go="chat" data-chat="Rajan Mehta">
+                      <p class="sh-thread__name">Rajan Mehta</p>
+                      <p class="sh-thread__preview">Study session tomorrow? · 2:15 PM</p>
+                    </button>
+                    <button type="button" class="sh-thread" data-go="chat" data-chat="Navneeth Dhamotharan">
+                      <p class="sh-thread__name">Navneeth Dhamotharan</p>
+                      <p class="sh-thread__preview">Week 3 notes shared · Yesterday</p>
+                    </button>
+                  </section>
+
+                  <!-- Chat -->
+                  <section class="app-screen" data-screen="chat">
+                    <div class="sh-chat-header">
+                      <button type="button" data-go="messages" aria-label="Back">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                      </button>
+                      <div class="sh-avatar sh-avatar--sm" id="chat-avatar">CD</div>
+                      <strong id="chat-title">Caden Duong</strong>
+                    </div>
+                    <div class="sh-chat-messages">
+                      <div class="sh-bubble sh-bubble--them">So Question 1 about week 3 — did you finish the reading?</div>
+                      <div class="sh-bubble sh-bubble--me">Not yet, planning to tonight!</div>
+                      <div class="sh-bubble sh-bubble--them">Want to meet at Odegaard at 6?</div>
+                    </div>
+                  </section>
+
+                  <!-- Calendar -->
+                  <section class="app-screen has-nav" data-screen="calendar">
+                    <h2 class="sh-screen-header">Calendar</h2>
+                    <div class="sh-cal-widget">
+                      <h3>November 2024</h3>
+                      <div class="sh-cal-days">
+                        <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                        <span></span><span></span><span></span><span></span><span></span><span>1</span><span>2</span>
+                        <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+                        <span>17</span><span>18</span><span>19</span><span class="is-today">20</span><span>21</span><span>22</span><span>23</span>
+                        <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+                      </div>
+                    </div>
+                    <div class="sh-week-grid">
+                      <span class="sh-day-label">M</span><span class="sh-day-label">T</span><span class="sh-day-label">W</span><span class="sh-day-label">T</span><span class="sh-day-label">F</span><span class="sh-day-label">S</span><span class="sh-day-label">S</span>
+                      <div class="sh-time-block"></div><div class="sh-time-block is-busy"></div><div class="sh-time-block is-busy"></div><div class="sh-time-block"></div><div class="sh-time-block is-busy"></div><div class="sh-time-block"></div><div class="sh-time-block"></div>
+                      <div class="sh-time-block"></div><div class="sh-time-block"></div><div class="sh-time-block"></div><div class="sh-time-block is-busy"></div><div class="sh-time-block"></div><div class="sh-time-block"></div><div class="sh-time-block"></div>
+                    </div>
+                  </section>
+
+                </div>
+
+                <nav class="sh-nav" id="sh-bottom-nav" aria-label="App navigation">
+                  <button type="button" class="sh-nav__btn" data-nav-go="groups" data-nav-item="groups" aria-label="Active Groups">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M4 18c0-2 2-3 5-3s5 1 5 3M15 18c0-2 2-3 5-3s5 1 5 3"/></svg>
+                  </button>
+                  <button type="button" class="sh-nav__btn" data-nav-go="calendar" data-nav-item="calendar" aria-label="Calendar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                  </button>
+                  <button type="button" class="sh-nav__btn" data-nav-go="dashboard" data-nav-item="dashboard" aria-label="Home">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5L12 4l8 6.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-9.5z"/></svg>
+                  </button>
+                  <button type="button" class="sh-nav__btn" data-nav-go="messages" data-nav-item="messages" aria-label="Messages">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.4 8.4 0 013.8-.9h.5a8.5 8.5 0 018 8.4z"/></svg>
+                  </button>
+                  <button type="button" class="sh-nav__btn" data-nav-go="profile" data-nav-item="profile" aria-label="Profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0110 10 10 10 0 01-10 10A10 10 0 012 12 2z"/></svg>
+                  </button>
+                </nav>
+
+                <div class="sh-toast" id="sh-toast" role="status" aria-live="polite"></div>
               </div>
-              <div class="phone-frame__home-indicator" aria-hidden="true"></div>
             </div>
+            <div class="phone-frame__home-indicator" aria-hidden="true"></div>
           </div>
-          <p class="prototype-hint">Click or tap inside the screen to interact. Use the bottom nav, sign-in, and onboarding flows as designed in Figma.</p>
         </div>
 
         <aside class="prototype-sidebar card">
-          <h3>Prototype flow</h3>
-          <p class="prototype-sidebar__intro">Starting from <strong>Start page</strong>. Screens in the StudyAI file:</p>
+          <h3>Prototype guide</h3>
+          <p class="prototype-sidebar__intro">Currently on: <strong id="current-screen-label">Start</strong></p>
           <ol class="prototype-flow-list">
-            <li>Start page</li>
-            <li>UW API Sign in</li>
-            <li>Profile set up</li>
-            <li>Personalization</li>
-            <li>Dashboard</li>
-            <li>Search</li>
-            <li>Matches</li>
-            <li>Create group</li>
-            <li>Active Groups</li>
-            <li>Messages</li>
-            <li>Calendar</li>
+            <li>Start → Sign in → Profile</li>
+            <li>Personalization (optional)</li>
+            <li>Dashboard with quick actions</li>
+            <li>Search, Matches, Create</li>
+            <li>Groups, Messages, Calendar</li>
           </ol>
-          <p class="prototype-sidebar__note">Screen list from Figma file metadata. In-prototype links follow the connections defined in Figma.</p>
-          <a href="https://www.figma.com/design/SuBMyD73Ybk0Q3d4NFE3DP/StudyAI?node-id=1-2" class="btn btn--secondary" target="_blank" rel="noopener" style="margin-top: var(--space-md); width: 100%; text-align: center; justify-content: center;">View design file</a>
+          <p class="prototype-sidebar__note">Built from the StudyAI Figma file using HTML, CSS, and JS. Select 2+ matches to form a group.</p>
         </aside>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
