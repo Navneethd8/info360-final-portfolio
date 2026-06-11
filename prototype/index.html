@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Prototype | StudyHub</title>
+  <meta name="description" content="Try the StudyHub Figma prototype: tap through onboarding, matching, groups, and messaging.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="../index.html" class="site-logo">StudyHub</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../index.html#problem">Problem</a>
+        <a href="../index.html#rationale">Rationale</a>
+        <a href="../solution/">Solution</a>
+        <a href="../evaluation/">Evaluation</a>
+        <a href="../prototype/" class="is-active">Prototype</a>
+        <a href="../index.html#reflection">Reflection</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--purple prototype-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> → Implementation / Prototype
+        </nav>
+
+        <header class="section-header">
+          <span class="section-header__number">Implementation</span>
+          <h2>Interactive Prototype</h2>
+          <p class="section-header__intro">Try StudyHub in a phone frame. Tap buttons and hotspots to walk through the full Figma prototype with live interactions.</p>
+        </header>
+
+        <div class="prototype-toolbar">
+          <a href="https://www.figma.com/proto/SuBMyD73Ybk0Q3d4NFE3DP/StudyAI?node-id=1-2&amp;starting-point-node-id=1-2" class="btn btn--secondary" target="_blank" rel="noopener">Open in Figma</a>
+          <button type="button" class="btn btn--primary" id="fullscreen-btn">Fullscreen</button>
+          <button type="button" class="btn btn--secondary" id="restart-btn">Restart flow</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white prototype-stage-section">
+      <div class="container prototype-layout">
+        <div class="prototype-stage">
+          <div class="phone-frame" id="phone-frame">
+            <div class="phone-frame__bezel">
+              <div class="phone-frame__speaker"></div>
+              <div class="phone-frame__screen">
+                <iframe
+                  id="figma-prototype"
+                  title="StudyHub interactive Figma prototype"
+                  loading="lazy"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="phone-frame__home-indicator" aria-hidden="true"></div>
+            </div>
+          </div>
+          <p class="prototype-hint">Click or tap inside the screen to interact. Use the bottom nav, sign-in, and onboarding flows as designed in Figma.</p>
+        </div>
+
+        <aside class="prototype-sidebar card">
+          <h3>Prototype flow</h3>
+          <p class="prototype-sidebar__intro">Starting from <strong>Start page</strong>. Screens in the StudyAI file:</p>
+          <ol class="prototype-flow-list">
+            <li>Start page</li>
+            <li>UW API Sign in</li>
+            <li>Profile set up</li>
+            <li>Personalization</li>
+            <li>Dashboard</li>
+            <li>Search</li>
+            <li>Matches</li>
+            <li>Create group</li>
+            <li>Active Groups</li>
+            <li>Messages</li>
+            <li>Calendar</li>
+          </ol>
+          <p class="prototype-sidebar__note">Screen list from Figma file metadata. In-prototype links follow the connections defined in Figma.</p>
+          <a href="https://www.figma.com/design/SuBMyD73Ybk0Q3d4NFE3DP/StudyAI?node-id=1-2" class="btn btn--secondary" target="_blank" rel="noopener" style="margin-top: var(--space-md); width: 100%; text-align: center; justify-content: center;">View design file</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div><strong>StudyHub</strong><br>INFO 360 · UW · Spring 2026</div>
+      <div><a href="../index.html">← Back to case study</a></div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/prototype.js"></script>
+</body>
+</html>

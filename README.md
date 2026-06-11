@@ -43,3 +43,4 @@ Pushes to `main` auto-deploy via `.github/workflows/deploy.yml` (GitHub Actions 
 | Landing | `index.html` | Problem, Rationale, Reflection, Limitations, References |
 | Solution | `solution/` | Design Solution |
 | Evaluation | `evaluation/` | Evaluation |
+| Prototype | `prototype/` | Interactive Figma prototype (embedded) |
